@@ -3,11 +3,14 @@ Added my precision S3D settings system and forced stereo3D On/Off independent of
 Tested working on my LG D2342P monitor with NVidia 452.06 and 3D Vision driver installed separately by <a href="https://helixmod.blogspot.com/2017/05/3d-fix-manager.html"><b>3D Fix Manager 1.85</b></a>  
 Also should work with active S3D hardware and shutter glasses so give me feedback how it go.
 
+This branch is upgrade to Visual Studio 2019 and also compiled AppPackage included so you can install it an test S3D without Visual Studio just click on `Install.ps1` file with right mouse button and select `Run with PowerShell` and follow onscreen instructions.
+After installation you can run `Direct3D stereoscopic 3D C++ sample` program from Windows start menu.
+
 ![Screenshot](https://github.com/Vital-Volkov/Remake-of-Direct3D11-native-stereoscopic-sample/blob/master/Screenshot.png)  
 Below is a copy of the original Microsoft readme:
 # Direct3D stereoscopic 3D sample
 ## Requires
-- Visual Studio 2013
+- Visual Studio 2019
 ## License
 - MS-LPL
 ## Technologies
@@ -82,18 +85,18 @@ Visual Studio&nbsp;2013</a>.</p>
 <tbody>
 <tr>
 <th>Client</th>
-<td><dt>Windows&nbsp;8.1 </dt></td>
+<td><dt>Windows&nbsp;10 </dt></td>
 </tr>
 <tr>
 <th>Server</th>
-<td><dt>Windows Server&nbsp;2012&nbsp;R2 </dt></td>
+<td><dt>Windows Server&nbsp;2016 </dt></td>
 </tr>
 </tbody>
 </table>
 <h2>Build the sample</h2>
 <ol>
-<li>Start Visual Studio&nbsp;2013 and select <b>File</b> &gt; <b>Open</b> &gt; <b>Project/Solution</b>.
-</li><li>Go to the directory in which you unzipped the sample. Go to the directory named for the sample, and double-click the Visual Studio&nbsp;2013 Solution (.sln) file.
+<li>Start Visual Studio&nbsp;2019 and select <b>File</b> &gt; <b>Open</b> &gt; <b>Project/Solution</b>.
+</li><li>Go to the directory in which you unzipped the sample. Go to the directory named for the sample, and double-click the Visual Studio&nbsp;2019 Solution (.sln) file.
 </li><li>Press F7 or use <b>Build</b> &gt; <b>Build Solution</b> to build the sample. </li></ol>
 <h2>Run the sample</h2>
 <p>To debug the app and then run it, press F5 or use <b>Debug &gt; Start Debugging</b>. To run the app without debugging, press Ctrl&#43;F5 or use

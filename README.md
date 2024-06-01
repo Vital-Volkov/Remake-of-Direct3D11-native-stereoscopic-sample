@@ -3,8 +3,8 @@ Added my precision S3D settings system and forced stereo3D On/Off independent of
 Tested working on my LG D2342P monitor with NVidia 452.06 and 3D Vision driver installed separately by <a href="https://helixmod.blogspot.com/2017/05/3d-fix-manager.html"><b>3D Fix Manager 1.85</b></a>  
 Also should work with active S3D hardware and shutter glasses so give me feedback how it go.
 
-This branch is upgrade to Visual Studio 2019 and also compiled AppPackage included so you can install it an test S3D without Visual Studio just click on `Install.ps1` file with right mouse button and select `Run with PowerShell` and follow onscreen instructions.
-After installation you can run `Direct3D stereoscopic 3D C++ sample` program from Windows start menu.
+This branch is upgraded to Visual Studio 2019 and also compiled AppPackage included so you can install it and test S3D without Visual Studio just click on `Install.ps1` file with right mouse button and select `Run with PowerShell` and follow onscreen instructions.
+After installation you can run the `Direct3D stereoscopic 3D C++ sample` program from the Windows start menu.
 
 ![Screenshot](https://github.com/Vital-Volkov/Remake-of-Direct3D11-native-stereoscopic-sample/blob/master/Screenshot.png)  
 Below is a copy of the original Microsoft readme:

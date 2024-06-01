@@ -1,27 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
-  <Identity Name="Microsoft.SDKSamples.StereoSimpleDirect3D.CPP" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" Version="1.0.0.0" />
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  IgnorableNamespaces="uap mp">
+
+  <Identity Name="Microsoft.SDKSamples.StereoSimpleDirect3D.CPP" Publisher="CN=Vital" Version="1.0.0.0" />
+
+  <mp:PhoneIdentity PhoneProductId="a66e4800-ef89-4975-a0a3-4ef46c957f30" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+
   <Properties>
     <DisplayName>Direct3D stereoscopic 3D C++ sample</DisplayName>
     <PublisherDisplayName>Microsoft Corporation</PublisherDisplayName>
     <Logo>storeLogo-sdk.png</Logo>
   </Properties>
-  <Prerequisites>
-    <OSMinVersion>6.3.0</OSMinVersion>
-    <OSMaxVersionTested>6.3.0</OSMaxVersionTested>
-  </Prerequisites>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+  </Dependencies>
+
   <Resources>
     <Resource Language="en-us" />
   </Resources>
+
   <Applications>
     <Application Id="DirectXApplication.App" Executable="StereoSimpleDirect3D.exe" EntryPoint="DirectXApplication.App">
-      <VisualElements DisplayName="Direct3D stereoscopic 3D C++ sample" Logo="squareTile-sdk.png" SmallLogo="smallTile-sdk.png" Description="Direct3D stereoscopic 3D C++ sample" ForegroundText="light" BackgroundColor="#00b2f0">
-        <DefaultTile ShowName="allLogos" ShortName="D3D stereoscopic 3D C++" />
-        <SplashScreen Image="splash-sdk.png" BackgroundColor="#00b2f0" />
-      </VisualElements>
+      <uap:VisualElements
+        DisplayName="Direct3D stereoscopic 3D C++ sample"
+        Description="Direct3D stereoscopic 3D C++ sample"
+        Square150x150Logo="squareTile-sdk.png"
+        Square44x44Logo="smallTile44-sdk.png"
+        BackgroundColor="#00b2f0">
+        <uap:DefaultTile Square71x71Logo="storeLogo71x71-sdk.png" Wide310x150Logo="wideTile310x150-sdk.png" Square310x310Logo="splash310x310-sdk.png"/>
+        <uap:SplashScreen Image="splash-sdk.png"/>
+      </uap:VisualElements>
     </Application>
   </Applications>
+
   <Capabilities>
     <Capability Name="internetClient" />
   </Capabilities>
+
 </Package>

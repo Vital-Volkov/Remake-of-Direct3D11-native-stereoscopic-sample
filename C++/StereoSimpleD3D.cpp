@@ -423,8 +423,20 @@ void StereoSimpleD3D::Update(
 			);
 	}
 
+    //m_FPS = 1 / timeDelta;
+
+    if (eyeIndex == 0)
+        m_FramesCount++;
+
+    if (timeTotal - m_lastFPSUpdateTime >= FPSUpdatePeriod)
+    {
+        m_FPS = m_FramesCount / (timeTotal - m_lastFPSUpdateTime);
+        m_FramesCount = 0;
+        m_lastFPSUpdateTime = timeTotal;
+    }
+
 	//screenDistance = m_parameters.viewportWidthMillimeters * .5f / m_parameters.viewportWidthTangent;
-	//HintMessage();
+	HintMessage();
 
     // Transpose the matrices in the constant buffer.
     ConstantBuffer constantBuffer;
@@ -490,7 +502,7 @@ void StereoSimpleD3D::SetSettings(_In_ Settings settings)
 	//	"Virtual IPD = " + m_virtualIPD + " mm\n"
 	//	"Vertical FOV = " + m_FOV + " deg\n";
 	//m_hintMessage = HintMessage();
-	HintMessage();
+	//HintMessage();
 }
 
 //Platform::String^ StereoSimpleD3D::HintMessage()
@@ -525,6 +537,7 @@ void StereoSimpleD3D::HintMessage()
 		"Left/Right Swapped: " + m_leftRightSwapped + "\n"
 		"User IPD = " + m_userIPD + " mm\n"
 		"Virtual IPD = " + m_virtualIPD + " mm\n"
-		"Vertical FOV = " + m_FOV + " deg\n";
+		"Vertical FOV = " + m_FOV + " deg\n"
+		"FPS = " + m_FPS + "\n";
 	//return hintMessage;
 }

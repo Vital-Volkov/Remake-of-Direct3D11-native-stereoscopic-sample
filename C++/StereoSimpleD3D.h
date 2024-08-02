@@ -80,5 +80,8 @@ private:
 	Platform::String^        m_hintMessage;                 // hint message about customer manipulation
     //float                    m_worldScale;                  // developer specified world unit
 	float                    m_FOV;							// vertical Field Of View in degrees
-	StereoParameters		 m_parameters;
+    float                    m_FramesCount;
+    float                    m_FPS;
+    float                    m_lastFPSUpdateTime;
+    StereoParameters		 m_parameters;
 };

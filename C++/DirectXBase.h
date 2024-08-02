@@ -65,5 +65,5 @@ protected private:
     bool                                            m_windowSizeChangeInProgress;
     bool                                            m_stereoEnabled = true;
 	bool                                            m_leftRightSwapped;
-	bool                                            m_previousStereoEnabled;
+	bool                                            m_previousStereoEnabled = m_stereoEnabled;
 };

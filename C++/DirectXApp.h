@@ -9,11 +9,13 @@
 
 #include "StereoSimpleD3D.h"
 
-#define S3DOnOffKey VirtualKey::Multiply
+//#define S3DOnOffKey VirtualKey::Multiply
+#define S3DOnOffKey VirtualKey::Decimal
 #define Modifier1Key VirtualKey::Control
 #define Modifier2Key VirtualKey::Shift
 #define IncreaseKey VirtualKey::Add
 #define DecreaseKey VirtualKey::Subtract
+#define FPSUpdatePeriod 1 //Sec
 
 ref class DirectXApp : public Windows::ApplicationModel::Core::IFrameworkView
 {

@@ -251,6 +251,7 @@ void DirectXBase::UpdateForWindowSizeChange()
 
 	if (m_previousStereoEnabled != m_stereoEnabled)
     {
+        //throw;
 		m_previousStereoEnabled = m_stereoEnabled;
         // Swap chain needs to be recreated so release the existing one.
         // The rest of the dependent resources with be released in CreateWindowSizeDependentResources.
